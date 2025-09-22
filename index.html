@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panadería La sierra - Inicio</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        h1, h2, h3 {
+            color: #A6592D;
+            text-align: center;
+        }
+
+        section {
+            padding: 60px 20px;
+            background-color: #fff;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header y Navegación */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 40px;
+            background-color: #f8f8f8;
+            border-bottom: 3px solid #e0c8a6;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            width: 200px;
+            height: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #A6592D;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #c49863;
+        }
+
+        /* Sección del Banner */
+        .banner {
+            width: 100%;
+            height: 400px;
+            background: url('banner-panaderia.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .banner h1 {
+            font-size: 4em;
+            margin: 0;
+            color: white;
+        }
+        
+        /* Sección de la Empresa */
+        .section-empresa table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .section-empresa td {
+            padding: 40px;
+            vertical-align: top;
+        }
+
+        .historia-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Sección de Productos */
+        .section-productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .producto {
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .producto:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .producto img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        .producto h3 {
+            margin-top: 15px;
+            font-size: 1.5em;
+        }
+
+        .producto p {
+            font-size: 1em;
+            color: #666;
+        }
+
+        .producto button {
+            background-color: #25D366; /* Color de WhatsApp */
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .producto button:hover {
+            background-color: #128C7E;
+        }
+
+        /* Sección de Galería */
+        .section-galeria {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .galeria-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .galeria-item img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Sección de Contacto */
+        .section-contacto form {
+            display: grid;
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section-contacto label {
+            font-weight: bold;
+        }
+
+        .section-contacto input, .section-contacto textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .section-contacto textarea {
+            resize: vertical;
+        }
+
+        .section-contacto button {
+            background-color: #A6592D;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .section-contacto button:hover {
+            background-color: #c49863;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="img/logo.png" alt="logo" width="100px" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#empresa">Empresa</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="inicio" class="section-banner">
+            <div class="banner">
+                <img src="img/Diseño sin título.gif" alt="banner-panaderia">
+            </div>
+        </section>
+
+        <section id="empresa" class="section-empresa">
+            <h2>Nuestra Empresa</h2>
+            <table>
+                <tr>
+                    <td>
+                        <img src="img/historia.png" alt="historia" class="historia-img">
+                    </td>
+                    <td>
+                        <h3>Nuestra Historia</h3>
+                        <p>Fundada en 1985, nuestra panadería ha sido un pilar en la comunidad, ofreciendo panes artesanales y postres deliciosos. Nos enorgullece utilizar ingredientes frescos y técnicas tradicionales para garantizar el mejor sabor en cada bocado.</p>
+                        <p>Desde el principio, nuestro objetivo ha sido simple: hornear felicidad para nuestros clientes. Cada pan, cada pastel y cada galleta se elabora con pasión y dedicación, manteniendo vivo el legado familiar que nos ha inspirado por décadas.</p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section id="productos" class="section-productos">
+            <h2>Nuestros Productos</h2>
+            <div class="producto">
+                <img src="img/producto1.jpg" alt="pan Artesanal">
+                <h4>Pan Artesanal</h4>
+                <p>Pan de masa madre con corteza crujiente y miga suave.</p>
+                <a href="https://wa.me/+573053823799?text=Hola,%20me%20interesa%20el%20pan%20artesanal." target="_blank"><button>Comprar por WhatsApp</button></a>
+            </div>
+            <div class="producto">
+                <img src="img/producto2.jpg" alt="pastel de chocolate">
+                <h4>Pastel de Chocolate</h4>
+                <p>Delicioso pastel de chocolate, ideal para cualquier celebración.</p>
+                <a href="https://wa.me/+573053823799?text=Hola,%20me%20interesa%20el%20pastel%20de%20chocolate." target="_blank"><button>Comprar por WhatsApp</button></a>
+            </div>
+            <div class="producto">
+                <img src="img/producto3.jpg" alt="Croissant">
+                <h4>Croissant</h4>
+                <p>Croissant de mantequilla, hojaldrado y perfectamente dorado.</p>
+                <a href="https://wa.me/+573053823799?text=Hola,%20me%20interesa%20el%20croissant." target="_blank"><button>Comprar por WhatsApp</button></a>
+            </div>
+        </section>
+
+        <section id="galeria" class="section-galeria">
+            <h2>Galería</h2>
+            <div class="galeria-item">
+                <img src="img/galeria1.png" alt="galeria1">
+            </div>
+            <div class="galeria-item">
+                <img src="img/galeria2.png" alt="galeria2">
+            </div>
+            <div class="galeria-item">
+                <img src="img/galeria3.png" alt="galeria3">
+            </div>
+        </section>
+
+        <section id="contacto" class="section-contacto">
+            <h2>Contáctanos</h2>
+            <form action="#" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono">
+
+                <label for="asunto">Asunto:</label>
+                <input type="text" id="asunto" name="asunto" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </section>
+        <footer>
+            <p style="text-align: center;">             © Copyright. Todos los derechos reservados.</p>
+        </footer>
+    </main>
+</body>
+</html>
